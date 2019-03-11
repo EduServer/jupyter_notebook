@@ -35,11 +35,11 @@ data-file-path="{{file_path}}"
     <div id="menus" class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
           <p  class="navbar-text indicator_area">
-          <span id="current-mode" >{% trans %}current mode{% endtrans %}</span>
+          <span id="current-mode" >{% trans %}当前模式{% endtrans %}</span>
           </p>
         <button type="button" class="btn btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <i class="fa fa-bars"></i>
-          <span class="navbar-text">Menu</span>
+          <span class="navbar-text">菜单</span>
         </button>
         <ul class="nav navbar-nav navbar-right">
           <li id="notification_area"></li>
@@ -48,20 +48,20 @@ data-file-path="{{file_path}}"
           <ul class="nav navbar-nav">
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}File{% endtrans %}</a>
               <ul id="file-menu" class="dropdown-menu">
-                <li id="new-file"><a href="#">{% trans %}New{% endtrans %}</a></li>
-                <li id="save-file"><a href="#">{% trans %}Save{% endtrans %}</a></li>
-                <li id="rename-file"><a href="#">{% trans %}Rename{% endtrans %}</a></li>
-                <li id="download-file"><a href="#">{% trans %}Download{% endtrans %}</a></li>
+                <li id="new-file"><a href="#">{% trans %}新建{% endtrans %}</a></li>
+                <li id="save-file"><a href="#">{% trans %}保存{% endtrans %}</a></li>
+                <li id="rename-file"><a href="#">{% trans %}重命名{% endtrans %}</a></li>
+                <li id="download-file"><a href="#">{% trans %}下载{% endtrans %}</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Edit{% endtrans %}</a>
               <ul id="edit-menu" class="dropdown-menu">
-                <li id="menu-find"><a href="#">{% trans %}Find{% endtrans %}</a></li>
-                <li id="menu-replace"><a href="#">{% trans %}Find &amp; Replace{% endtrans %}</a></li>
+                <li id="menu-find"><a href="#">{% trans %}查找{% endtrans %}</a></li>
+                <li id="menu-replace"><a href="#">{% trans %}查找并替换{% endtrans %}</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">{% trans %}Key Map{% endtrans %}</li>
-                <li id="menu-keymap-default"><a href="#">{% trans %}Default{% endtrans %}<i class="fa"></i></a></li>
-                <li id="menu-keymap-sublime"><a href="#">{% trans %}Sublime Text{% endtrans %}<i class="fa"></i></a></li>
+                <li class="dropdown-header">{% trans %}键值对{% endtrans %}</li>
+                <li id="menu-keymap-default"><a href="#">{% trans %}默认{% endtrans %}<i class="fa"></i></a></li>
+                <li id="menu-keymap-sublime"><a href="#">{% trans %}代码编辑器{% endtrans %}<i class="fa"></i></a></li>
                 <li id="menu-keymap-vim"><a href="#">Vim<i class="fa"></i></a></li>
                 <li id="menu-keymap-emacs"><a href="#">emacs<i class="fa"></i></a></li>
               </ul>
@@ -69,11 +69,11 @@ data-file-path="{{file_path}}"
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}View{% endtrans %}</a>
               <ul id="view-menu" class="dropdown-menu">
               <li id="toggle_header" title="{% trans %}Show/Hide the logo and notebook title (above menu bar){% endtrans %}">
-              <a href="#">{% trans %}Toggle Header{% endtrans %}</a></li>
-              <li id="menu-line-numbers"><a href="#">{% trans %}Toggle Line Numbers{% endtrans %}</a></li>
+              <a href="#">{% trans %}切换Header{% endtrans %}</a></li>
+              <li id="menu-line-numbers"><a href="#">{% trans %}切换行号{% endtrans %}</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Language{% endtrans %}</a>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}程序语言{% endtrans %}</a>
               <ul id="mode-menu" class="dropdown-menu">
               </ul>
             </li>

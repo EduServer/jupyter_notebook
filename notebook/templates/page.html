@@ -117,8 +117,8 @@ dir="ltr">
 
 <noscript>
     <div id='noscript'>
-      {% trans %}Jupyter Notebook requires JavaScript.{% endtrans %}<br>
-      {% trans %}Please enable it to proceed. {% endtrans %}
+      {% trans %}Jupyter Notebook需要JavaScript{% endtrans %}<br>
+      {% trans %}请启用它来打开。 {% endtrans %}
   </div>
 </noscript>
 
@@ -138,9 +138,9 @@ dir="ltr">
 
     <span id="login_widget">
       {% if logged_in %}
-        <button id="logout" class="btn btn-sm navbar-btn">{% trans %}Logout{% endtrans %}</button>
+        <button id="logout" class="btn btn-sm navbar-btn">{% trans %}登出{% endtrans %}</button>
       {% elif login_available and not logged_in %}
-        <button id="login" class="btn btn-sm navbar-btn">{% trans %}Login{% endtrans %}</button>
+        <button id="login" class="btn btn-sm navbar-btn">{% trans %}登陆{% endtrans %}</button>
       {% endif %}
     </span>
 

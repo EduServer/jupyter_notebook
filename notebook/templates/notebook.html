@@ -61,10 +61,10 @@ data-notebook-path="{{notebook_path | urlencode}}"
         <div class="container-fluid">
             <button type="button" class="btn btn-default navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <i class="fa fa-bars"></i>
-              <span class="navbar-text">{% trans %}Menu{% endtrans %}</span>
+              <span class="navbar-text">{% trans %}菜单{% endtrans %}</span>
             </button>
             <p id="kernel_indicator" class="navbar-text indicator_area">
-              <span class="kernel_indicator_name">{% trans %}Kernel{% endtrans %}</span>
+              <span class="kernel_indicator_name">{% trans %}内核{% endtrans %}</span>
               <i id="kernel_indicator_icon"></i>
             </p>
             <i id="readonly-indicator" class="navbar-text" title='{% trans %}This notebook is read-only{% endtrans %}'>
@@ -80,25 +80,25 @@ data-notebook-path="{{notebook_path | urlencode}}"
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}File{% endtrans %}</a>
                     <ul id="file_menu" class="dropdown-menu">
                         <li id="new_notebook" class="dropdown-submenu">
-                            <a href="#">{% trans %}New Notebook{% endtrans %}</a>
+                            <a href="#">{% trans %}新建Notebook{% endtrans %}</a>
                             <ul class="dropdown-menu" id="menu-new-notebook-submenu"></ul>
                         </li>
                         <li id="open_notebook"
                             title="{% trans %}Opens a new window with the Dashboard view{% endtrans %}">
-                            <a href="#">{% trans %}Open...{% endtrans %}</a></li>
+                            <a href="#">{% trans %}打开...{% endtrans %}</a></li>
                         <!-- <hr/> -->
                         <li class="divider"></li>
                         <li id="copy_notebook"
                             title="{% trans %}Open a copy of this notebook's contents and start a new kernel{% endtrans %}">
-                            <a href="#">{% trans %}Make a Copy...{% endtrans %}</a></li>
+                            <a href="#">{% trans %}创建一个复制...{% endtrans %}</a></li>
                         <li id="save_notebook_as"
                             title="{% trans %}Save a copy of the notebook's contents and start a new kernel{% endtrans %}">
-                            <a href="#">{% trans %}Save as...{% endtrans %}</a></li>
-                        <li id="rename_notebook"><a href="#">{% trans %}Rename...{% endtrans %}</a></li>
-                        <li id="save_checkpoint"><a href="#">{% trans %}Save and Checkpoint{% endtrans %}</a></li>
+                            <a href="#">{% trans %}保存为...{% endtrans %}</a></li>
+                        <li id="rename_notebook"><a href="#">{% trans %}重命名...{% endtrans %}</a></li>
+                        <li id="save_checkpoint"><a href="#">{% trans %}保存并保存检查点{% endtrans %}</a></li>
                         <!-- <hr/> -->
                         <li class="divider"></li>
-                        <li id="restore_checkpoint" class="dropdown-submenu"><a href="#">{% trans %}Revert to Checkpoint{% endtrans %}</a>
+                        <li id="restore_checkpoint" class="dropdown-submenu"><a href="#">{% trans %}还原至检查点{% endtrans %}</a>
                           <ul class="dropdown-menu">
                             <li><a href="#"></a></li>
                             <li><a href="#"></a></li>
@@ -108,8 +108,8 @@ data-notebook-path="{{notebook_path | urlencode}}"
                           </ul>
                         </li>
                         <li class="divider"></li>
-                        <li id="print_preview"><a href="#">{% trans %}Print Preview{% endtrans %}</a></li>
-                        <li class="dropdown-submenu"><a href="#">{% trans %}Download as{% endtrans %}</a>
+                        <li id="print_preview"><a href="#">{% trans %}打印预览{% endtrans %}</a></li>
+                        <li class="dropdown-submenu"><a href="#">{% trans %}下载为{% endtrans %}</a>
                             <ul id="download_menu" class="dropdown-menu">
                                 <li id="download_ipynb"><a href="#">{% trans %}Notebook (.ipynb){% endtrans %}</a></li>
                                 <li id="download_script"><a href="#">{% trans %}Script{% endtrans %}</a></li>
@@ -126,63 +126,63 @@ data-notebook-path="{{notebook_path | urlencode}}"
                                 {% endfor %}
                             </ul>
                         </li>
-                        <li class="dropdown-submenu hidden"><a href="#">{% trans %}Deploy as{% endtrans %}</a>
+                        <li class="dropdown-submenu hidden"><a href="#">{% trans %}部署为{% endtrans %}</a>
                             <ul id="deploy_menu" class="dropdown-menu"></ul>
                         </li>
                         <li class="divider"></li>
                         <li id="trust_notebook"
                             title="{% trans %}Trust the output of this notebook{% endtrans %}">
-                            <a href="#" >{% trans %}Trust Notebook{% endtrans %}</a></li>
+                            <a href="#" >{% trans %}信任Notebook{% endtrans %}</a></li>
                         <li class="divider"></li>
                         <li id="close_and_halt"
                             title="{% trans %}Shutdown this notebook's kernel, and close this window{% endtrans %}">
-                            <a href="#" >{% trans %}Close and Halt{% endtrans %}</a></li>
+                            <a href="#" >{% trans %}关闭并挂起{% endtrans %}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Edit{% endtrans %}</a>
                     <ul id="edit_menu" class="dropdown-menu">
-                        <li id="cut_cell"><a href="#">{% trans %}Cut Cells{% endtrans %}</a></li>
-                        <li id="copy_cell"><a href="#">{% trans %}Copy Cells{% endtrans %}</a></li>
-                        <li id="paste_cell_above" class="disabled"><a href="#">{% trans %}Paste Cells Above{% endtrans %}</a></li>
-                        <li id="paste_cell_below" class="disabled"><a href="#">{% trans %}Paste Cells Below{% endtrans %}</a></li>
-                        <li id="paste_cell_replace" class="disabled"><a href="#">{% trans %}Paste Cells &amp; Replace{% endtrans %}</a></li>
-                        <li id="delete_cell"><a href="#">{% trans %}Delete Cells{% endtrans %}</a></li>
-                        <li id="undelete_cell" class="disabled"><a href="#">{% trans %}Undo Delete Cells{% endtrans %}</a></li>
+                        <li id="cut_cell"><a href="#">{% trans %}剪切代码块{% endtrans %}</a></li>
+                        <li id="copy_cell"><a href="#">{% trans %}复制代码块{% endtrans %}</a></li>
+                        <li id="paste_cell_above" class="disabled"><a href="#">{% trans %}粘贴到上面{% endtrans %}</a></li>
+                        <li id="paste_cell_below" class="disabled"><a href="#">{% trans %}粘贴到下面{% endtrans %}</a></li>
+                        <li id="paste_cell_replace" class="disabled"><a href="#">{% trans %}粘贴代码块 &amp; 替换{% endtrans %}</a></li>
+                        <li id="delete_cell"><a href="#">{% trans %}删除代码块{% endtrans %}</a></li>
+                        <li id="undelete_cell" class="disabled"><a href="#">{% trans %}撤回删除操作{% endtrans %}</a></li>
                         <li class="divider"></li>
-                        <li id="split_cell"><a href="#">{% trans %}Split Cell{% endtrans %}</a></li>
-                        <li id="merge_cell_above"><a href="#">{% trans %}Merge Cell Above{% endtrans %}</a></li>
-                        <li id="merge_cell_below"><a href="#">{% trans %}Merge Cell Below{% endtrans %}</a></li>
+                        <li id="split_cell"><a href="#">{% trans %}分割代码块{% endtrans %}</a></li>
+                        <li id="merge_cell_above"><a href="#">{% trans %}合并上面的代码块{% endtrans %}</a></li>
+                        <li id="merge_cell_below"><a href="#">{% trans %}合并下面的代码块{% endtrans %}</a></li>
                         <li class="divider"></li>
-                        <li id="move_cell_up"><a href="#">{% trans %}Move Cell Up{% endtrans %}</a></li>
-                        <li id="move_cell_down"><a href="#">{% trans %}Move Cell Down{% endtrans %}</a></li>
+                        <li id="move_cell_up"><a href="#">{% trans %}把代码块上移{% endtrans %}</a></li>
+                        <li id="move_cell_down"><a href="#">{% trans %}把代码块下移{% endtrans %}</a></li>
                         <li class="divider"></li>
-                        <li id="edit_nb_metadata"><a href="#">{% trans %}Edit Notebook Metadata{% endtrans %}</a></li>
+                        <li id="edit_nb_metadata"><a href="#">{% trans %}编辑Notebook元数据{% endtrans %}</a></li>
                         <li class="divider"></li>
-                        <li id="find_and_replace"><a href="#"> {% trans %}Find and Replace{% endtrans %} </a></li>
+                        <li id="find_and_replace"><a href="#"> {% trans %}寻找并替换{% endtrans %} </a></li>
                         <li class="divider"></li>
-                        <li id="cut_cell_attachments"><a href="#">{% trans %}Cut Cell Attachments{% endtrans %}</a></li>
-                        <li id="copy_cell_attachments"><a href="#">{% trans %}Copy Cell Attachments{% endtrans %}</a></li>
-                        <li id="paste_cell_attachments" class="disabled"><a href="#">{% trans %}Paste Cell Attachments{% endtrans %}</a></li>
+                        <li id="cut_cell_attachments"><a href="#">{% trans %}剪切附件{% endtrans %}</a></li>
+                        <li id="copy_cell_attachments"><a href="#">{% trans %}复制附件{% endtrans %}</a></li>
+                        <li id="paste_cell_attachments" class="disabled"><a href="#">{% trans %}粘贴附件{% endtrans %}</a></li>
                         <li class="divider"></li>
-                        <li id="insert_image" class="disabled"><a href="#"> {% trans %}Insert Image{% endtrans %} </a></li>
+                        <li id="insert_image" class="disabled"><a href="#"> {% trans %}插入图片{% endtrans %} </a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}View{% endtrans %}</a>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}视图{% endtrans %}</a>
                     <ul id="view_menu" class="dropdown-menu">
                         <li id="toggle_header"
                             title="{% trans %}Show/Hide the logo and notebook title (above menu bar){% endtrans %}">
-                            <a href="#">{% trans %}Toggle Header{% endtrans %}</a>
+                            <a href="#">{% trans %}切换Header{% endtrans %}</a>
                         </li>
                         <li id="toggle_toolbar"
                             title="{% trans %}Show/Hide the action icons (below menu bar){% endtrans %}">
-                            <a href="#">{% trans %}Toggle Toolbar{% endtrans %}</a>
+                            <a href="#">{% trans %}切换Toolbar{% endtrans %}</a>
                         </li>
                         <li id="toggle_line_numbers"
                             title="{% trans %}Show/Hide line numbers in cells{% endtrans %}">
-                            <a href="#">{% trans %}Toggle Line Numbers{% endtrans %}</a>
+                            <a href="#">{% trans %}切换行数{% endtrans %}</a>
                         </li>
                         <li id="menu-cell-toolbar" class="dropdown-submenu">
-                            <a href="#">{% trans %}Cell Toolbar{% endtrans %}</a>
+                            <a href="#">{% trans %}代码块Toolbar{% endtrans %}</a>
                             <ul class="dropdown-menu" id="menu-cell-toolbar-submenu"></ul>
                         </li>
                     </ul>
@@ -191,40 +191,40 @@ data-notebook-path="{{notebook_path | urlencode}}"
                     <ul id="insert_menu" class="dropdown-menu">
                         <li id="insert_cell_above"
                             title="{% trans %}Insert an empty Code cell above the currently active cell{% endtrans %}">
-                            <a href="#">{% trans %}Insert Cell Above{% endtrans %}</a></li>
+                            <a href="#">{% trans %}插入到上面的代码块{% endtrans %}</a></li>
                         <li id="insert_cell_below"
                             title="{% trans %}Insert an empty Code cell below the currently active cell{% endtrans %}">
-                            <a href="#">{% trans %}Insert Cell Below{% endtrans %}</a></li>
+                            <a href="#">{% trans %}插入到下面的代码块{% endtrans %}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Cell{% endtrans %}</a>
                     <ul id="cell_menu" class="dropdown-menu">
                         <li id="run_cell" title="{% trans %}Run this cell, and move cursor to the next one{% endtrans %}">
-                            <a href="#">{% trans %}Run Cells{% endtrans %}</a></li>
+                            <a href="#">{% trans %}执行代码快{% endtrans %}</a></li>
                         <li id="run_cell_select_below" title="{% trans %}Run this cell, select below{% endtrans %}">
-                            <a href="#">{% trans %}Run Cells and Select Below{% endtrans %}</a></li>
+                            <a href="#">{% trans %}执行代码块并选择下一个{% endtrans %}</a></li>
                         <li id="run_cell_insert_below" title="{% trans %}Run this cell, insert below{% endtrans %}">
-                            <a href="#">{% trans %}Run Cells and Insert Below{% endtrans %}</a></li>
+                            <a href="#">{% trans %}执行代码块并插入到下面{% endtrans %}</a></li>
                         <li id="run_all_cells" title="{% trans %}Run all cells in the notebook{% endtrans %}">
-                            <a href="#">{% trans %}Run All{% endtrans %}</a></li>
+                            <a href="#">{% trans %}运行所有代码快{% endtrans %}</a></li>
                         <li id="run_all_cells_above" title="{% trans %}Run all cells above (but not including) this cell{% endtrans %}">
-                            <a href="#">{% trans %}Run All Above{% endtrans %}</a></li>
+                            <a href="#">{% trans %}运行上方的代码块{% endtrans %}</a></li>
                         <li id="run_all_cells_below" title="{% trans %}Run this cell and all cells below it{% endtrans %}">
-                            <a href="#">{% trans %}Run All Below{% endtrans %}</a></li>
+                            <a href="#">{% trans %}运行下方的代码块{% endtrans %}</a></li>
                         <li class="divider"></li>
                         <li id="change_cell_type" class="dropdown-submenu"
                             title="{% trans %}All cells in the notebook have a cell type. By default, new cells are created as 'Code' cells{% endtrans %}">
-                            <a href="#">{% trans %}Cell Type{% endtrans %}</a>
+                            <a href="#">{% trans %}代码块类型{% endtrans %}</a>
                             <ul class="dropdown-menu">
                               <li id="to_code"
                                   title="{% trans %}Contents will be sent to the kernel for execution, and output will display in the footer of cell{% endtrans %}">
                                   <a href="#">Code</a></li>
                               <li id="to_markdown"
                                   title="{% trans %}Contents will be rendered as HTML and serve as explanatory text{% endtrans %}">
-                                  <a href="#">{% trans %}Markdown{% endtrans %}</a></li>
+                                  <a href="#">{% trans %}标签{% endtrans %}</a></li>
                               <li id="to_raw"
                                   title="{% trans %}Contents will pass through nbconvert unmodified{% endtrans %}">
-                                  <a href="#">{% trans %}Raw NBConvert{% endtrans %}</a></li>
+                                  <a href="#">{% trans %}原生NBConvert{% endtrans %}</a></li>
                             </ul>
                         </li>
                         <li class="divider"></li>
@@ -232,31 +232,31 @@ data-notebook-path="{{notebook_path | urlencode}}"
                             <ul class="dropdown-menu">
                                 <li id="toggle_current_output"
                                     title="{% trans %}Hide/Show the output of the current cell{% endtrans %}">
-                                    <a href="#">{% trans %}Toggle{% endtrans %}</a>
+                                    <a href="#">{% trans %}切换{% endtrans %}</a>
                                 </li>
                                 <li id="toggle_current_output_scroll"
                                     title="{% trans %}Scroll the output of the current cell{% endtrans %}">
-                                    <a href="#">{% trans %}Toggle Scrolling{% endtrans %}</a>
+                                    <a href="#">{% trans %}切换滚动{% endtrans %}</a>
                                 </li>
                                 <li id="clear_current_output"
                                     title="{% trans %}Clear the output of the current cell{% endtrans %}">
-                                    <a href="#">{% trans %}Clear{% endtrans %}</a>
+                                    <a href="#">{% trans %}清除{% endtrans %}</a>
                                 </li>
                             </ul>
                         </li>
-                        <li id="all_outputs" class="dropdown-submenu"><a href="#">{% trans %}All Output{% endtrans %}</a>
+                        <li id="all_outputs" class="dropdown-submenu"><a href="#">{% trans %}所有输出{% endtrans %}</a>
                             <ul class="dropdown-menu">
                                 <li id="toggle_all_output"
                                     title="{% trans %}Hide/Show the output of all cells{% endtrans %}">
-                                    <a href="#">{% trans %}Toggle{% endtrans %}</a>
+                                    <a href="#">{% trans %}切换{% endtrans %}</a>
                                 </li>
                                 <li id="toggle_all_output_scroll"
                                     title="{% trans %}Scroll the output of all cells{% endtrans %}">
-                                    <a href="#">{% trans %}Toggle Scrolling{% endtrans %}</a>
+                                    <a href="#">{% trans %}切换滚动条{% endtrans %}</a>
                                 </li>
                                 <li id="clear_all_output"
                                     title="{% trans %}Clear the output of all cells{% endtrans %}">
-                                    <a href="#">{% trans %}Clear{% endtrans %}</a>
+                                    <a href="#">{% trans %}清除{% endtrans %}</a>
                                 </li>
                             </ul>
                         </li>
@@ -266,36 +266,36 @@ data-notebook-path="{{notebook_path | urlencode}}"
                     <ul id="kernel_menu" class="dropdown-menu">
                         <li id="int_kernel"
                             title="{% trans %}Send Keyboard Interrupt (CTRL-C) to the Kernel{% endtrans %}">
-                            <a href="#">{% trans %}Interrupt{% endtrans %}</a>
+                            <a href="#">{% trans %}中断{% endtrans %}</a>
                         </li>
                         <li id="restart_kernel"
                             title="{% trans %}Restart the Kernel{% endtrans %}">
-                            <a href="#">{% trans %}Restart{% endtrans %}</a>
+                            <a href="#">{% trans %}重启{% endtrans %}</a>
                         </li>
                         <li id="restart_clear_output"
                             title="{% trans %}Restart the Kernel and clear all output{% endtrans %}">
-                            <a href="#">{% trans %}Restart &amp; Clear Output{% endtrans %}</a>
+                            <a href="#">{% trans %}重启 &amp; 清除输出{% endtrans %}</a>
                         </li>
                         <li id="restart_run_all"
                             title="{% trans %}Restart the Kernel and re-run the notebook{% endtrans %}">
-                            <a href="#">{% trans %}Restart &amp; Run All{% endtrans %}</a>
+                            <a href="#">{% trans %}重启 &amp; 运行所有{% endtrans %}</a>
                         </li>
                         <li id="reconnect_kernel"
                             title="{% trans %}Reconnect to the Kernel{% endtrans %}">
-                            <a href="#">{% trans %}Reconnect{% endtrans %}</a>
+                            <a href="#">{% trans %}重连{% endtrans %}</a>
                         </li>
                         <li id="shutdown_kernel"
                             title="Shutdown the Kernel">
-                            <a href="#">{% trans %}Shutdown{% endtrans %}</a>
+                            <a href="#">{% trans %}关闭{% endtrans %}</a>
                         </li>
                         <li class="divider"></li>
                         <li id="menu-change-kernel" class="dropdown-submenu">
-                            <a href="#">{% trans %}Change kernel{% endtrans %}</a>
+                            <a href="#">{% trans %}更换内核{% endtrans %}</a>
                             <ul class="dropdown-menu" id="menu-change-kernel-submenu"></ul>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Help{% endtrans %}</a>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}帮助{% endtrans %}</a>
                     <ul  id="help_menu" class="dropdown-menu">
                         {% block help %}
                         <li id="notebook_tour" title="{% trans %}A quick tour of the notebook user interface{% endtrans %}"><a href="#">{% trans %}User Interface Tour{% endtrans %}</a></li>
@@ -327,7 +327,7 @@ data-notebook-path="{{notebook_path | urlencode}}"
                             {% endif %}
                         {% endfor %}
                         <li class="divider"></li>
-                        <li title="{% trans %}About Jupyter Notebook{% endtrans %}"><a id="notebook_about" href="#">{% trans %}About{% endtrans %}</a></li>
+                        <li title="{% trans %}About Jupyter Notebook{% endtrans %}"><a id="notebook_about" href="#">{% trans %}有关{% endtrans %}</a></li>
                         {% endblock %}
                     </ul>
                 </li>
