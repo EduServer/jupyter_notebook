@@ -77,7 +77,7 @@ data-notebook-path="{{notebook_path | urlencode}}"
             <span id="notification_area"></span>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}File{% endtrans %}</a>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}文件{% endtrans %}</a>
                     <ul id="file_menu" class="dropdown-menu">
                         <li id="new_notebook" class="dropdown-submenu">
                             <a href="#">{% trans %}新建Notebook{% endtrans %}</a>
@@ -139,7 +139,7 @@ data-notebook-path="{{notebook_path | urlencode}}"
                             <a href="#" >{% trans %}关闭并挂起{% endtrans %}</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Edit{% endtrans %}</a>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}编辑{% endtrans %}</a>
                     <ul id="edit_menu" class="dropdown-menu">
                         <li id="cut_cell"><a href="#">{% trans %}剪切代码块{% endtrans %}</a></li>
                         <li id="copy_cell"><a href="#">{% trans %}复制代码块{% endtrans %}</a></li>
@@ -187,7 +187,7 @@ data-notebook-path="{{notebook_path | urlencode}}"
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Insert{% endtrans %}</a>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}插入{% endtrans %}</a>
                     <ul id="insert_menu" class="dropdown-menu">
                         <li id="insert_cell_above"
                             title="{% trans %}Insert an empty Code cell above the currently active cell{% endtrans %}">
@@ -197,10 +197,10 @@ data-notebook-path="{{notebook_path | urlencode}}"
                             <a href="#">{% trans %}插入到下面的代码块{% endtrans %}</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Cell{% endtrans %}</a>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}代码块{% endtrans %}</a>
                     <ul id="cell_menu" class="dropdown-menu">
                         <li id="run_cell" title="{% trans %}Run this cell, and move cursor to the next one{% endtrans %}">
-                            <a href="#">{% trans %}执行代码快{% endtrans %}</a></li>
+                            <a href="#">{% trans %}执行代码块{% endtrans %}</a></li>
                         <li id="run_cell_select_below" title="{% trans %}Run this cell, select below{% endtrans %}">
                             <a href="#">{% trans %}执行代码块并选择下一个{% endtrans %}</a></li>
                         <li id="run_cell_insert_below" title="{% trans %}Run this cell, insert below{% endtrans %}">
@@ -228,7 +228,7 @@ data-notebook-path="{{notebook_path | urlencode}}"
                             </ul>
                         </li>
                         <li class="divider"></li>
-                        <li id="current_outputs" class="dropdown-submenu"><a href="#">{% trans %}Current Outputs{% endtrans %}</a>
+                        <li id="current_outputs" class="dropdown-submenu"><a href="#">{% trans %}当前输出{% endtrans %}</a>
                             <ul class="dropdown-menu">
                                 <li id="toggle_current_output"
                                     title="{% trans %}Hide/Show the output of the current cell{% endtrans %}">
@@ -262,7 +262,7 @@ data-notebook-path="{{notebook_path | urlencode}}"
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}Kernel{% endtrans %}</a>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}内核{% endtrans %}</a>
                     <ul id="kernel_menu" class="dropdown-menu">
                         <li id="int_kernel"
                             title="{% trans %}Send Keyboard Interrupt (CTRL-C) to the Kernel{% endtrans %}">
